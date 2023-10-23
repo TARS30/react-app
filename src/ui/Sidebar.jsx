@@ -15,6 +15,7 @@ const StyledAside = styled.aside`
   grid-row: 1 / -1;
   flex-direction: column;
   padding: 3.2rem 2.4rem;
+
   background-color: var(--color-grey-0);
   @media (max-width: 768px) {
     z-index: 10;
@@ -23,14 +24,21 @@ const StyledAside = styled.aside`
     left: -100%;
     align-items: end;
     width: 100%;
-    height: 100%;
+    /* grid-row: auto; */
     transition: left 0.4s ease;
-    
     html.menu-open & {
       left: 0;
+      height: inherit;
+      
     }
   }
 `;
+
+const NavLinkContainer = styled.div`
+@media(max-width: 768px) {
+  display: none;
+}
+`
 
 const CloseButton = styled.button`
   background-color: transparent;
@@ -53,9 +61,14 @@ const Sidebar = () => {
 
   return (
     <StyledAside>
-      <NavLink to="/dashboard">
-        <Logo />
-      </NavLink>
+      <CloseButton onClick={menuClose}>
+        <HiXMark />
+      </CloseButton>
+      <NavLinkContainer>
+        <NavLink to="/dashboard">
+          <Logo />
+        </NavLink>
+      </NavLinkContainer>
       <MainNav />
       {!uploaderVisible && (
         <Button onClick={uploaderVisibilityHandler}>Data uploader</Button>
@@ -63,9 +76,6 @@ const Sidebar = () => {
       {uploaderVisible && (
         <Uploader uploaderVisibilityHandler={uploaderVisibilityHandler} />
       )}
-      <CloseButton onClick={menuClose}>
-        <HiXMark />
-      </CloseButton>
     </StyledAside>
   );
 };

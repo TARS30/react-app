@@ -15,13 +15,14 @@ const StyledDashboardLayout = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto 34rem auto;
   gap: 2.4rem;
-  @media (max-width: 1280px) {
+  /* @media (max-width: 1280px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-  }
-  @media (max-width: 850px) {
+  } */
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
 `;
 

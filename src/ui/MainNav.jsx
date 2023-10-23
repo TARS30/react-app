@@ -7,7 +7,7 @@ import {
   HiOutlineHomeModern,
   HiOutlineUsers,
 } from "react-icons/hi2";
-
+import { menuClose } from "../utils/helpers";
 
 const NavList = styled.ul`
   display: flex;
@@ -56,7 +56,7 @@ const StyledNavLink = styled(NavLink)`
 const MainNav = () => {
   return (
     <nav>
-      <NavList>
+      <NavList onClick={menuClose}>
         <li>
           <StyledNavLink to="/dashboard">
             <HiOutlineHome />

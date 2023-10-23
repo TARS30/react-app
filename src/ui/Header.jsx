@@ -23,7 +23,12 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--color-grey-50);
-  `;
+  width: 100%;
+  @media (max-width: 768px) {
+    position: fixed;
+   
+  }
+`;
 
 const Flex = styled.div`
   display: flex;
