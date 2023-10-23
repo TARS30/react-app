@@ -5,7 +5,7 @@ import FormRow from "../../ui/FormRow";
 import Spinner from "../../ui/Spinner";
 
 import { useForm } from "react-hook-form";
-import { useSignup as useSignUp } from "./useSignup";
+import { useSignup } from "./useSignup";
 
 // Email regex: /\S+@\S+\.\S+/
 
@@ -14,7 +14,7 @@ function SignupForm() {
   
   const { errors } = formState;
 
-  const { signup, isLoading } = useSignUp();
+  const { signup, isLoading } = useSignup();
 
   function onSubmit({ fullName, email, password }) {
     if (isLoading) {
