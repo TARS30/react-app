@@ -5,7 +5,7 @@ import FormRow from "../../ui/FormRow";
 import Spinner from "../../ui/Spinner";
 
 import { useForm } from "react-hook-form";
-import { useSignup as useSignUp } from "./useSignUp";
+import { useSignup as useSignUp } from "./useSignup";
 
 // Email regex: /\S+@\S+\.\S+/
 
