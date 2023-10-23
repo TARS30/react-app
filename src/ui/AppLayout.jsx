@@ -12,7 +12,7 @@ const Main = styled.main`
 const StyledAppLayout = styled.div`
   display: grid;
   height: 100vh;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto;
   grid-template-columns: 26rem 1fr;
   @media (max-width: 768px) {
     grid-template-columns: auto;
