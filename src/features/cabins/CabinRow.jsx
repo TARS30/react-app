@@ -3,17 +3,19 @@
 import { useAddCabin } from "./useAddCabin";
 import { UseDeleteCabin } from "./useDeleteCabin";
 import { formatCurrency } from "../../utils/helpers";
+
 import Modal from "../../ui/Modal";
+import Menus from "../../ui/Menus";
+import Table from "../../ui/Table";
 import styled from "styled-components";
 import CreateCabinForm from "./CreateCabinForm";
 import ConfirmDelete from "../../ui/ConfirmDelete";
-import Table from "../../ui/Table";
-import Menus from "../../ui/Menus";
+
 
 const Img = styled.img`
   display: block;
   width: 6.4rem;
-
+  
   aspect-ratio: 3 / 2;
   object-fit: cover;
   object-position: center;
